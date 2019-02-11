@@ -1,9 +1,12 @@
-#home{
+#body{
   color: black;
   margin: 0;
   size: 120%;
   background-color: #FAF9F9;
   font-family: 'Roboto', sans-serif;
+  background-image: url("../images/background33.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .navcontainer{
   list-style-type: none;
@@ -17,6 +20,11 @@
 .navitem{
   float: right;
 }
+#totop a{
+  position: absolute;
+  top: -80px;
+  left: 0px;
+}
 .navitem a{
   display: block;
   text-align: center;
@@ -26,6 +34,10 @@
   padding: 14px 14px;
   text-decoration: none;
   transition: all .15s ease-in-out;
+}
+#totop a:focus{
+  position: absolute;
+  top: 0px;
 }
 .navitem a:visited{
   color: #0035b3;
@@ -39,5 +51,46 @@
 }
 .navitem .currentlink {
   text-decoration: underline;
-  border-style: solid; 
+  border-style: solid;
+}
+.experiencecontainer{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.experiencecontainer .experienceitem{
+  text-align: center;
+  font-weight: bold;
+  color: #0035b3;
+}
+.experiencecontainer .experienceitem li{
+  list-style-type: square;
+  text-align: left;
+  font-weight: normal;
+  color: black;
+}
+.projectgallery{
+  margin: 5%;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 3 px solid black;
+  display: flex;
+  justify-content: space-around;
+}
+.galleryitem{
+ width: relative;
+ height: relative;
+}
+.projectgallery img{
+  width: 25%;
+  height: 25%;
+}
+#headshot{
+  width: relative;
+  height: relative;
+}
+header img{
+  width: 35%;
+  height: 35%;
 }
