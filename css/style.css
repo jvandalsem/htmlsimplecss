@@ -1,57 +1,58 @@
-#body{
-  color: black;
+body{
   margin: 0;
-  size: 120%;
-  background-color: #FAF9F9;
+  size: 100%;
   font-family: 'Roboto', sans-serif;
+  background-color: #FAF9F9;
   background-image: url("../images/background33.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .navcontainer{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   background-color: #FAF9F9;
+  list-style-type: none;
+  overflow: hidden;
   z-index: 1;
   border-bottom: 1px solid #bbb;
 }
-.navitem{
-  float: right;
+.navcontainer li{
+  float: none;
+}
+.navcontainer a{
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 200%;
+  font-size: 10px;
+  padding: .5em .5em;
+  transition: all .15s ease-in-out;
 }
 #totop a{
   position: absolute;
   top: -80px;
   left: 0px;
 }
-.navitem a{
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 200%;
-  font-size: 16px;
-  padding: 14px 14px;
-  text-decoration: none;
-  transition: all .15s ease-in-out;
-}
 #totop a:focus{
   position: absolute;
   top: 0px;
 }
-.navitem a:visited{
+.navcontainer a:visited{
   color: #0035b3;
 }
-.navitem a:link, a:visited{
+.navcontainer a:link, a:visited{
   color: #0035b3;
 }
-.navitem a:hover{
+.navcontainer a:hover{
   color: black;
   transform: scale(1.02);
 }
-.navitem .currentlink {
+.navcontainer .currentlink {
   text-decoration: underline;
-  border-style: solid;
+}
+h1[class*='welcome']{
+  align: center;
+  padding: .5em;
+  margin: 1em;
 }
 .experiencecontainer{
   display: flex;
@@ -63,34 +64,168 @@
   font-weight: bold;
   color: #0035b3;
 }
-.experiencecontainer .experienceitem li{
+.experiencecontainer .experienceitem > li{
   list-style-type: square;
   text-align: left;
   font-weight: normal;
   color: black;
 }
 .projectgallery{
-  margin: 5%;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 3 px solid black;
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .galleryitem{
  width: relative;
  height: relative;
+ margin: .25em;
 }
-.projectgallery img{
-  width: 25%;
-  height: 25%;
+.projectgallery > img{
+  width: 60%;
+  height: 60%;
+}
+.welcome{
+  margin: .75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1[id*='title']{
+  font-size: 18px;
+  text-align: center;
+  margin: .5em;
 }
 #headshot{
+  display: inline-block;
   width: relative;
   height: relative;
+  padding: .5em .5em;
 }
 header img{
   width: 35%;
   height: 35%;
+}
+div[class='content'], footer{
+  margin: .75em;
+  padding: .5em .5em;
+  font-size: 12px;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 374px) {
+  .navcontainer{
+    position: fixed;
+    top: 0;
+  }
+  .welcome{
+    margin: 2em;
+    flex-direction: row;
+  }
+  div[class='content'], footer{
+    margin: 1em;
+    padding: .9em .9em;
+    font-size: 14px;
+    margin-left: 6em;
+  }
+  h1[id*='title']{
+    font-size: 22px;
+    text-align: baseline;
+    margin: 1em;
+    padding-top: 2em;
+  }
+  #titleexperience{
+    padding-top: .75em;
+  }
+  .tabletgallery{
+    display: flex;
+    justify-content: space-around;
+    border-top: solid thin;
+  }
+  .projectspec{
+    margin: .75em;
+    width: 120%;
+    align-self: center;
+  }
+  .projectgallery > img{
+    width: 50%;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .navcontainer{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #FAF9F9;
+    z-index: 1;
+    border-bottom: 1px solid #bbb;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+  }
+  .navcontainer li{
+    float: right;
+  }
+  .navcontainer .currentlink {
+    border-style: solid;
+  }
+  .navcontainer a{
+    font-size: 12px;
+    padding: 1em 1em;
+  }
+  .welcome{
+    margin-top: 4em;
+    flex-direction: row;
+    padding-top: 2.6em;
+  }
+  header img{
+    width: 25%;
+    height: 25%;
+  }
+  div[class='content'], footer{
+    margin: 2em;
+    padding: 1em;
+    font-size: 16px;
+  }
+  h1[id*='title']{
+    font-size: 26px;
+    text-align: center;
+    margin: 1em;
+    padding-top: 2.6em;
+  }
+  #headshot{
+    padding: 1em;
+  }
+  .projectgallery{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em;
+  }
+  .galleryitem{
+   width: relative;
+   height: relative;
+   margin: .25em;
+  }
+  .tabletgallery{
+    display: block;
+    border-style: none;
+  }
+  .projectspec{
+    width: 100%;
+    text-align: center;
+  }
+  .projectgallery > img{
+    width: 32%;
+    height: 32%;
+  }
 }
