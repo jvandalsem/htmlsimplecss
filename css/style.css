@@ -78,7 +78,7 @@ h1[class*='welcome']{
   margin: 1em;
   padding-top: 10px;
   padding-bottom: 10px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .galleryitem{
  width: relative;
@@ -121,7 +121,7 @@ footer{
   justify-content: center;
   align-items: center;
 }
-@media only screen and (min-width: 374px) {
+@media only screen and (min-width: 624px) {
   .navcontainer{
     position: fixed;
     top: 0;
