@@ -27,7 +27,7 @@ body{
   padding: .5em .5em;
   transition: all .15s ease-in-out;
 }
-#totop a{
+#totop > a{
   position: absolute;
   top: -80px;
   left: 0px;
